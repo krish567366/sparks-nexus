@@ -1,66 +1,129 @@
-# SPARKS — Society of Programming, Automation, Robotics & Knowledge Systems# Welcome to your Lovable project
+# SPARKS — Society of Programming, Automation, Robotics & Knowledge Systems# SPARKS — Society of Programming, Automation, Robotics & Knowledge Systems# Welcome to your Lovable project
 
 
 
-**Engineering Intelligence. Enforcing Excellence.**## Project info
+**Engineering Intelligence. Enforcing Excellence.**
 
 
 
-Official website of SPARKS, an elite university robotics and AI society.**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Official website of SPARKS, an elite university robotics and AI society.**Engineering Intelligence. Enforcing Excellence.**## Project info
 
 
 
-## Getting Started## How can I edit this code?
+## Getting Started
 
 
 
-Follow these steps to run the project locally:There are several ways of editing your application.
+Follow these steps to run the project locally:Official website of SPARKS, an elite university robotics and AI society.**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
 
 
-```sh**Use Lovable**
+```sh
 
 # Step 1: Clone the repository
 
-git clone https://github.com/krish567366/sparks-nexus.gitSimply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+git clone https://github.com/krish567366/sparks-nexus.git## Getting Started## How can I edit this code?
 
 
 
-# Step 2: Navigate to the project directoryChanges made via Lovable will be committed automatically to this repo.
+# Step 2: Navigate to the project directory
 
 cd sparks-nexus
 
-**Use your preferred IDE**
+Follow these steps to run the project locally:There are several ways of editing your application.
 
 # Step 3: Install the necessary dependencies
 
-npm installIf you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+npm install
 
 
 
-# Step 4: Start the development serverThe only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Step 4: Start the development server```sh**Use Lovable**
 
 npm run dev
 
+```# Step 1: Clone the repository
+
+
+
+## Technologies Usedgit clone https://github.com/krish567366/sparks-nexus.gitSimply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+
+
+
+This project is built with:
+
+
+
+- **Vite** - Next generation frontend tooling# Step 2: Navigate to the project directoryChanges made via Lovable will be committed automatically to this repo.
+
+- **TypeScript** - Type-safe JavaScript
+
+- **React** - UI librarycd sparks-nexus
+
+- **shadcn/ui** - Re-usable components
+
+- **Tailwind CSS** - Utility-first CSS framework**Use your preferred IDE**
+
+- **Framer Motion** - Animation library
+
+# Step 3: Install the necessary dependencies
+
+## Available Scripts
+
+npm installIf you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+- `npm run dev` - Start development server
+
+- `npm run build` - Build for production
+
+- `npm run build:dev` - Build in development mode
+
+- `npm run preview` - Preview production build# Step 4: Start the development serverThe only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+- `npm run lint` - Run ESLint
+
+- `npm run test` - Run testsnpm run dev
+
+- `npm run test:watch` - Run tests in watch mode
+
 ```Follow these steps:
 
-
-
-## Technologies Used```sh
-
-# Step 1: Clone the repository using the project's Git URL.
-
-This project is built with:git clone <YOUR_GIT_URL>
+## Project Structure
 
 
 
-- **Vite** - Next generation frontend tooling# Step 2: Navigate to the project directory.
+```
 
-- **TypeScript** - Type-safe JavaScriptcd <YOUR_PROJECT_NAME>
+src/## Technologies Used```sh
 
-- **React** - UI library
+├── components/     # React components
 
-- **shadcn/ui** - Re-usable components# Step 3: Install the necessary dependencies.
+├── pages/          # Page components# Step 1: Clone the repository using the project's Git URL.
+
+├── hooks/          # Custom React hooks
+
+├── lib/            # Utility functionsThis project is built with:git clone <YOUR_GIT_URL>
+
+└── assets/         # Static assets
+
+```
+
+
+
+## Contributing- **Vite** - Next generation frontend tooling# Step 2: Navigate to the project directory.
+
+
+
+Contributions are welcome! Please feel free to submit a Pull Request.- **TypeScript** - Type-safe JavaScriptcd <YOUR_PROJECT_NAME>
+
+
+
+## License- **React** - UI library
+
+
+
+This project is part of SPARKS organization.- **shadcn/ui** - Re-usable components# Step 3: Install the necessary dependencies.
+
 
 - **Tailwind CSS** - Utility-first CSS frameworknpm i
 
