@@ -16,36 +16,34 @@ const ParticleBackground = () => {
 
     const resize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = document.documentElement.scrollHeight;
     };
     resize();
     window.addEventListener("resize", resize);
 
-    // Create particles
-    const count = Math.min(80, Math.floor(window.innerWidth / 20));
+    const count = Math.min(100, Math.floor(window.innerWidth / 15));
     for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        size: Math.random() * 2 + 0.5,
-        opacity: Math.random() * 0.5 + 0.1,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        size: Math.random() * 1.8 + 0.4,
+        opacity: Math.random() * 0.4 + 0.05,
       });
     }
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw connections
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 150) {
+          if (dist < 130) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(56, 152, 255, ${0.08 * (1 - dist / 150)})`;
+            ctx.strokeStyle = `rgba(10, 132, 255, ${0.06 * (1 - dist / 130)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -54,11 +52,10 @@ const ParticleBackground = () => {
         }
       }
 
-      // Draw particles
       particles.forEach((p) => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(56, 152, 255, ${p.opacity})`;
+        ctx.fillStyle = `rgba(10, 132, 255, ${p.opacity})`;
         ctx.fill();
 
         p.x += p.vx;
@@ -69,7 +66,6 @@ const ParticleBackground = () => {
 
       animationId = requestAnimationFrame(draw);
     };
-
     draw();
 
     return () => {
@@ -82,7 +78,7 @@ const ParticleBackground = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: 0.5 }}
     />
   );
 };

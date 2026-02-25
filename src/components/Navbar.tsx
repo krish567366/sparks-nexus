@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Objectives", href: "#objectives" },
   { label: "Structure", href: "#structure" },
-  { label: "Governance", href: "#governance" },
+  { label: "Teams", href: "#teams" },
+  { label: "Sustainability", href: "#sustainability" },
   { label: "Events", href: "#events" },
   { label: "Join", href: "#join" },
 ];
@@ -23,45 +23,37 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "glass-card border-b border-white/5 py-3"
-          : "bg-transparent py-5"
+        scrolled ? "glass-card border-b border-white/5 py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-        <a href="#" className="font-display text-xl font-bold tracking-widest text-primary">
+        <a href="#" className="font-display text-lg font-bold tracking-[0.25em] text-primary">
           SPARKS
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-heading font-medium text-muted-foreground hover:text-primary transition-colors duration-300 tracking-wide uppercase"
+              className="text-xs font-heading font-medium text-muted-foreground hover:text-primary transition-colors duration-300 tracking-[0.15em] uppercase"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#join"
-            className="px-5 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-heading font-semibold tracking-wide uppercase hover:bg-primary/20 transition-all duration-300 neon-border-glow"
+            className="btn-glow px-5 py-2 rounded-lg bg-primary text-primary-foreground text-xs font-heading font-semibold tracking-[0.15em] uppercase"
           >
             Join SPARKS
           </a>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden glass-card mt-2 mx-4 rounded-xl p-4 flex flex-col gap-3">
           {navLinks.map((link) => (
