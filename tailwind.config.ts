@@ -82,30 +82,33 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { opacity: "0.4" },
+          "0%, 100%": { opacity: "0.3" },
           "50%": { opacity: "1" },
         },
-        "count-up": {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
+        "logo-lightning": {
+          "0%": { filter: "brightness(1) drop-shadow(0 0 0px transparent)" },
+          "10%": { filter: "brightness(1.8) drop-shadow(0 0 20px hsl(211 100% 52% / 0.8))" },
+          "20%": { filter: "brightness(1)" },
+          "30%": { filter: "brightness(1.5) drop-shadow(0 0 15px hsl(211 100% 52% / 0.6))" },
+          "40%, 100%": { filter: "brightness(1) drop-shadow(0 0 8px hsl(211 100% 52% / 0.3))" },
         },
-        "grid-flow": {
-          "0%": { transform: "translateY(0)" },
-          "100%": { transform: "translateY(-50%)" },
+        "circuit-pulse": {
+          "0%, 100%": { opacity: "0.15" },
+          "50%": { opacity: "0.4" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-        "count-up": "count-up 0.8s ease-out forwards",
-        "grid-flow": "grid-flow 20s linear infinite",
+        "logo-lightning": "logo-lightning 3s ease-in-out infinite",
+        "circuit-pulse": "circuit-pulse 4s ease-in-out infinite",
       },
     },
   },

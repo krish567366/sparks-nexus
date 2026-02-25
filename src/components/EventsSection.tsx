@@ -14,28 +14,28 @@ const EventsSection = () => {
   return (
     <section id="events" className="section-padding relative z-10">
       <div ref={ref} className={`max-w-5xl mx-auto animate-in-view ${isVisible ? "visible" : ""}`}>
-        <p className="font-heading text-sm tracking-[0.3em] uppercase text-primary mb-3 text-center">
+        <p className="font-heading text-xs tracking-[0.4em] uppercase text-primary mb-3 text-center">
           Calendar
         </p>
-        <h2 className="heading-display text-3xl md:text-5xl text-center text-foreground mb-12">
-          Upcoming <span className="text-gradient-blue">Events</span>
+        <h2 className="heading-display text-3xl md:text-5xl text-center mb-12">
+          <span className="metallic-shimmer">Upcoming Events</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {events.map((event, i) => (
             <div key={i} className="glass-card-hover p-7 relative overflow-hidden group">
               <div className="absolute top-4 right-4">
-                <span className="text-[10px] font-display tracking-widest uppercase text-primary/60 border border-primary/20 px-3 py-1 rounded-full">
+                <span className="text-[9px] font-display tracking-[0.2em] uppercase text-primary/50 border border-primary/15 px-3 py-1 rounded-full">
                   {event.status}
                 </span>
               </div>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <event.icon className="w-6 h-6 text-primary" />
+              <div className="w-11 h-11 rounded-lg bg-primary/8 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors border border-primary/10">
+                <event.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+              <h3 className="font-heading text-base font-semibold text-foreground mb-2">
                 {event.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 {event.desc}
               </p>
             </div>
